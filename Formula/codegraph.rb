@@ -8,8 +8,7 @@ class Codegraph < Formula
       url "https://github.com/LachlanS9/codegraph/releases/download/v#{version}/codegraph-macos-arm64"
       sha256 "PLACEHOLDER_MACOS_ARM64_SHA256"
     else
-      url "https://github.com/LachlanS9/codegraph/releases/download/v#{version}/codegraph-macos-x64"
-      sha256 "PLACEHOLDER_MACOS_X64_SHA256"
+      odie "codegraph does not currently ship an Intel Mac (x86_64) binary."
     end
   end
 
