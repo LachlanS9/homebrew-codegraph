@@ -2,7 +2,8 @@
 
 Homebrew tap for [`codegraph`](https://github.com/LachlanS9/codegraph) — a
 CLI that scans a codebase and generates dependency/call graphs as JSON or
-an interactive, self-contained HTML report.
+an interactive, self-contained HTML report. Supports C#, Java, Go,
+Python, TypeScript/React, and Rust.
 
 ## Install
 
@@ -10,15 +11,14 @@ an interactive, self-contained HTML report.
 brew install LachlanS9/codegraph/codegraph
 ```
 
-## Updating the formula
+## Usage
 
-The formula in `Formula/codegraph.rb` downloads a prebuilt binary per
-platform from the main repo's
-[GitHub Releases](https://github.com/LachlanS9/codegraph/releases). After
-each release:
+```
+codegraph                    # scan the current directory, write .codegraph/report.html
+codegraph path/to/repo       # scan a specific path
+codegraph --view=call        # function-call graph instead of module dependencies
+codegraph --help
+```
 
-1. Bump `version` in `Formula/codegraph.rb` to match the new tag.
-2. Replace the four placeholder `sha256` values with the real checksums
-   (`shasum -a 256 <binary>` against each of the four macOS/Linux release
-   assets — Windows isn't installable via Homebrew).
-3. Commit and push.
+See the [main repo](https://github.com/LachlanS9/codegraph) for full
+documentation.
