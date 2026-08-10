@@ -1,12 +1,12 @@
 class Codegraph < Formula
   desc "Scans a codebase and generates dependency/call graphs as JSON or an interactive HTML report"
   homepage "https://github.com/LachlanS9/codegraph"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/LachlanS9/codegraph/releases/download/v#{version}/codegraph-macos-arm64"
-      sha256 "61dca77eda4c80570f016b7aefae16dad145880e5daf3a207ebc421047344677"
+      sha256 "19aaf9e11b5401144d217d38f8623f36a3a3ad5e63980784f4278cda31e5d258"
     else
       odie "codegraph does not currently ship an Intel Mac (x86_64) binary."
     end
@@ -15,10 +15,10 @@ class Codegraph < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/LachlanS9/codegraph/releases/download/v#{version}/codegraph-linux-arm64"
-      sha256 "ebfec837afbe356b4fa07461d7f6c7fbb42d5a28005a4c577524d7da4fb8116a"
+      sha256 "e1e2c918151909b534ef57fa54af6822c563468c4cdbe5c15f5dc849ffdf9c95"
     else
       url "https://github.com/LachlanS9/codegraph/releases/download/v#{version}/codegraph-linux-x64"
-      sha256 "8c6e760f784622a1b1e0c20958bf6a5679dc2bc0d27cfb4dedb11dc3c3236a87"
+      sha256 "38ead9cdf1528bd0dc4267b73bcd9c704e3e72135b51dbcebc9fbb2595db80e4"
     end
   end
 
